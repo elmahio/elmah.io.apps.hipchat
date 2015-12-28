@@ -1,1 +1,1 @@
-# Slack integration for elmah.ioIntegrates Slack with elmah.io. To install the integration, go to the Apps tab on your log settings and add this app.
+# HipChat integration for elmah.ioIntegrates HipChat with elmah.io. To install the integration, go to the Apps tab on your log settings and add this app.
