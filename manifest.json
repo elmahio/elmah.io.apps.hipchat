@@ -1,0 +1,25 @@
+{
+	"variables": [{
+		"name": "token",
+		"description": "An access token from HipChat needed to call the HipChat API",
+		"type": "string",
+		"required": true
+	},{
+		"name": "room",
+		"description": "The id of the HipChat room where the chat message should appear",
+		"type": "string",
+		"required": true
+	}],
+	"rule": {
+		"title": "Post a message to HipChat on all errors",
+		"query": "severity: Error OR severity: Fatal",
+		"then": {
+			"http": {
+				"url": "https://api.hipchat.com/v1/rooms/message?format=json&auth_token=$token",
+				"method": "post",
+				"contentType": "application/x-www-form-urlencoded",
+				"body": "room_id=$room&from=elmah.io&message=$message"
+			}
+		}
+	}
+}
