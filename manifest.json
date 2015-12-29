@@ -14,12 +14,11 @@
 		"title": "Post a message to HipChat on all errors",
 		"query": "severity: Error OR severity: Fatal",
 		"then": {
-			"http": {
-				"url": "https://api.hipchat.com/v1/rooms/message?format=json&auth_token=$token",
-				"method": "post",
-				"contentType": "application/x-www-form-urlencoded",
-				"body": "room_id=$room&from=elmah.io&message=$message"
-			}
+			"type": "http",
+			"url": "https://api.hipchat.com/v1/rooms/message?format=json&auth_token=$token",
+			"method": "post",
+			"contentType": "application/x-www-form-urlencoded",
+			"body": "room_id=$room&from=elmah.io&message=$message"
 		}
 	}
 }
