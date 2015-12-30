@@ -1,11 +1,13 @@
 {
 	"variables": [{
-		"name": "token",
+		"key": "token",
+		"name": "Token",
 		"description": "An access token from HipChat needed to call the HipChat API",
 		"type": "text",
 		"required": true
 	},{
-		"name": "room",
+		"key": "room",
+		"name": "Room",
 		"description": "The id of the HipChat room where the chat message should appear",
 		"type": "text",
 		"required": true
