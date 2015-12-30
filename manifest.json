@@ -3,12 +3,14 @@
 		"key": "token",
 		"name": "Token",
 		"description": "An access token from HipChat needed to call the HipChat API",
+		"example": "4h2jGztgGdjwHaWgHcgYf4HdgD6khGLHGRf5dh35",
 		"type": "text",
 		"required": true
 	},{
 		"key": "room",
 		"name": "Room",
 		"description": "The id of the HipChat room where the chat message should appear",
+		"example": "myroom",
 		"type": "text",
 		"required": true
 	}],
