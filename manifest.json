@@ -15,8 +15,8 @@
 		"required": true
 	}],
 	"rule": {
-		"title": "Post a message to HipChat on all errors",
-		"query": "severity: Error OR severity: Fatal",
+		"title": "Post a message to HipChat on all new errors",
+		"query": "isNew:true AND (severity:Error OR severity:Fatal)",
 		"then": {
 			"type": "http",
 			"url": "https://api.hipchat.com/v1/rooms/message?format=json&auth_token=$token",
