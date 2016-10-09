@@ -23,8 +23,10 @@
 			"method": "post",
 			"contentType": "application/json",
 			"body": "{\"from\":\"elmah.io\",\"color\":\"red\",\"message_format\":\"html\",\"card\":{\"style\":\"application\",\"format\":\"medium\",\"url\":\"https://elmah.io/\",\"id\":\"$time\",\"title\":\"$message\",\"icon\":{\"url\":\"https://elmah.io/icons/AppIcon50x50.png\"},\"attributes\":[{\"label\":\"Type\",\"value\":{\"label\":\"$type\"}},{\"label\":\"Severity\",\"value\":{\"label\":\"$severity\"}},{\"label\":\"Host\",\"value\":{\"label\":\"$hostName\"}},{\"label\":\"User\",\"value\":{\"label\":\"$user\"}},{\"label\":\"Url\",\"value\":{\"label\":\"$url\"}}]},\"message\":\"$message\",\"notify\":true}",
-			"authentication": "bearer",
-			"token": "$token"
+			"authentication": {
+				"type": "bearer",
+				"token": "$token"
+			}
 		}
 	}
 }
