@@ -26,7 +26,8 @@
 			"authentication": {
 				"type": "bearer",
 				"token": "$token"
-			}
+			},
+			"testUrl": "https://api.hipchat.com/v2/room/$room"
 		}
 	}
 }
