@@ -16,13 +16,13 @@
 	}],
 	"rule": {
 		"title": "Post a message to HipChat on all new errors",
-		"query": "isNew:true AND (severity:Error OR severity:Fatal)",
+		"query": "(isNew:true AND (severity:Error OR severity:Fatal)) OR applicationName:\"Uptime Monitoring\"",
 		"then": {
 			"type": "http",
 			"url": "https://api.hipchat.com/v2/room/$room/notification",
 			"method": "post",
 			"contentType": "application/json",
-			"body": "{\"from\":\"elmah.io\",\"color\":\"red\",\"message_format\":\"html\",\"card\":{\"style\":\"application\",\"format\":\"medium\",\"url\":\"https://elmah.io/\",\"id\":\"$time\",\"title\":\"$message\",\"icon\":{\"url\":\"https://elmah.io/icons/AppIcon50x50.png\"},\"attributes\":[{\"label\":\"Type\",\"value\":{\"label\":\"$type\"}},{\"label\":\"Severity\",\"value\":{\"label\":\"$severity\"}},{\"label\":\"Host\",\"value\":{\"label\":\"$hostName\"}},{\"label\":\"User\",\"value\":{\"label\":\"$user\"}},{\"label\":\"Url\",\"value\":{\"label\":\"$url\"}}]},\"message\":\"$message\",\"notify\":true}",
+			"body": "{\"from\":\"elmah.io\",\"color\":\"$severityColor\",\"message_format\":\"html\",\"card\":{\"style\":\"application\",\"format\":\"medium\",\"url\":\"https://elmah.io/\",\"id\":\"$time\",\"title\":\"$message\",\"icon\":{\"url\":\"https://elmah.io/icons/AppIcon50x50.png\"},\"attributes\":[{\"label\":\"Type\",\"value\":{\"label\":\"$type\"}},{\"label\":\"Severity\",\"value\":{\"label\":\"$severity\"}},{\"label\":\"Host\",\"value\":{\"label\":\"$hostName\"}},{\"label\":\"User\",\"value\":{\"label\":\"$user\"}},{\"label\":\"Url\",\"value\":{\"label\":\"$url\"}}]},\"message\":\"$message\",\"notify\":true}",
 			"authentication": {
 				"type": "bearer",
 				"token": "$token"
