@@ -16,7 +16,7 @@
 	}],
 	"rule": {
 		"title": "Post a message to HipChat on all new errors",
-		"query": "(isNew:true AND (severity:Error OR severity:Fatal)) OR applicationName:\"Uptime Monitoring\"",
+		"query": "(isNew:true AND (severity:Error OR severity:Fatal)) OR applicationName.raw:\"Uptime Monitoring\"",
 		"then": {
 			"type": "http",
 			"url": "https://api.hipchat.com/v2/room/$room/notification",
