@@ -4,7 +4,7 @@
 		"name": "Token",
 		"description": "An access token from HipChat needed to call the HipChat API",
 		"example": "4h2jGztgGdjwHaWgHcgYf4HdgD6khGLHGRf5dh35",
-		"type": "text",
+		"type": "password",
 		"required": true
 	},{
 		"key": "room",
