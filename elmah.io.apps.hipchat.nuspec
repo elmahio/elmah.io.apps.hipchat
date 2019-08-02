@@ -8,9 +8,10 @@
     <title>HipChat Integration</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Post a chat message to HipChat when new errors occur on elmah.io.</description>
-    <projectUrl>https://github.com/elmahio/elmah.io.apps.hipchat</projectUrl>
+    <projectUrl>https://elmah.io/</projectUrl>
+    <repository type="git" url="https://github.com/elmahio/elmah.io.apps.hipchat" />
     <iconUrl>https://elmah.io/images/appstore/elmah.io.apps.hipchat.png</iconUrl>
-	<tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing HipChat</tags>
+    <tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing HipChat</tags>
   </metadata>
   <files>
     <file src="manifest.json" target="manifest.json" />
