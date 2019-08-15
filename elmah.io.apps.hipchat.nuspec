@@ -6,6 +6,7 @@
     <owners>elmah.io</owners>
     <id>elmah.io.apps.hipchat</id>
     <title>HipChat Integration</title>
+    <license type="expression">Apache-2.0</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Post a chat message to HipChat when new errors occur on elmah.io.</description>
     <projectUrl>https://elmah.io/</projectUrl>
